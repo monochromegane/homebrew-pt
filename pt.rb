@@ -16,7 +16,8 @@ class Pt < Formula
     system 'go', 'get', 'github.com/monochromegane/terminal'
     system 'go', 'get', 'github.com/jessevdk/go-flags'
     system 'go', 'get', 'code.google.com/p/go.text/transform'
-    system 'go', 'get', 'github.com/monochromegane/the_platinum_searcher/search'
+    mkdir_p buildpath/'src/github.com/monochromegane/the_platinum_searcher'
+    ln_s buildpath/'search', buildpath/'src/github.com/monochromegane/the_platinum_searcher/.'
     system 'go', 'build', '-o', 'pt'
     bin.install 'pt'
   end
