@@ -9,7 +9,11 @@ class Pt < Formula
 
   def install
     ENV['GOPATH'] = buildpath
-    system 'go', 'get', './...'
+    system 'go', 'get', 'github.com/shiena/ansicolor'
+    system 'go', 'get', 'github.com/monochromegane/terminal'
+    system 'go', 'get', 'github.com/jessevdk/go-flags'
+    system 'go', 'get', 'code.google.com/p/go.text/transform'
+    system 'go', 'get', 'github.com/monochromegane/the_platinum_searcher/search'
     system 'go', 'build', '-o', 'pt'
     bin.install 'pt'
   end
