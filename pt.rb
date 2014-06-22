@@ -1,6 +1,6 @@
 require 'formula'
 
-HOMEBREW_PT_VERSION='1.6.2'
+HOMEBREW_PT_VERSION='1.6.4'
 class Pt < Formula
   homepage 'https://github.com/monochromegane/the_platinum_searcher'
   url 'https://github.com/monochromegane/the_platinum_searcher.git', :tag => "v#{HOMEBREW_PT_VERSION}"
