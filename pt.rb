@@ -1,6 +1,6 @@
 require 'formula'
 
-HOMEBREW_PT_VERSION='1.6.5'
+HOMEBREW_PT_VERSION='1.7.0'
 class Pt < Formula
   homepage 'https://github.com/monochromegane/the_platinum_searcher'
   url 'https://github.com/monochromegane/the_platinum_searcher.git', :tag => "v#{HOMEBREW_PT_VERSION}"
@@ -16,9 +16,9 @@ class Pt < Formula
     system 'go', 'get', 'github.com/monochromegane/terminal'
     system 'go', 'get', 'github.com/jessevdk/go-flags'
     system 'go', 'get', 'code.google.com/p/go.text/transform'
-    mkdir_p buildpath/'src/github.com/monochromegane/the_platinum_searcher'
-    ln_s buildpath/'search', buildpath/'src/github.com/monochromegane/the_platinum_searcher/.'
-    system 'go', 'build', '-o', 'pt'
+    mkdir_p buildpath/'src/github.com/monochromegane'
+    ln_s buildpath, buildpath/'src/github.com/monochromegane/the_platinum_searcher'
+    system 'go', 'build', '-o', 'pt', 'cmd/pt/main.go'
     bin.install 'pt'
   end
 end
