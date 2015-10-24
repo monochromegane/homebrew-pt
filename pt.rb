@@ -1,10 +1,10 @@
 require 'formula'
 
-HOMEBREW_PT_VERSION='1.7.8'
+HOMEBREW_PT_VERSION='1.7.9'
 class Pt < Formula
   homepage 'https://github.com/monochromegane/the_platinum_searcher'
   url "https://github.com/monochromegane/the_platinum_searcher/releases/download/v#{HOMEBREW_PT_VERSION}/pt_darwin_amd64.zip"
-  sha1 '3e2e1c51a1d14ba7f8f5a0469aee43e904f51477'
+  sha1 'a59cc5fa697ed44b11a859fd2f47459f622ce318'
 
   version HOMEBREW_PT_VERSION
   head 'https://github.com/monochromegane/the_platinum_searcher.git', :branch => 'master'
@@ -19,6 +19,8 @@ class Pt < Formula
       ENV['GOPATH'] = buildpath
       system 'go', 'get', 'github.com/shiena/ansicolor'
       system 'go', 'get', 'github.com/monochromegane/terminal'
+      system 'go', 'get', 'github.com/monochromegane/go-home'
+      system 'go', 'get', 'github.com/monochromegane/conflag'
       system 'go', 'get', 'github.com/jessevdk/go-flags'
       system 'go', 'get', 'golang.org/x/text/transform'
       system 'go', 'get', 'golang.org/x/text/encoding/japanese'
