@@ -1,10 +1,10 @@
 require 'formula'
 
-HOMEBREW_PT_VERSION='2.1.3'
+HOMEBREW_PT_VERSION='2.1.4'
 class Pt < Formula
   homepage 'https://github.com/monochromegane/the_platinum_searcher'
   url "https://github.com/monochromegane/the_platinum_searcher/releases/download/v#{HOMEBREW_PT_VERSION}/pt_darwin_amd64.zip"
-  sha1 'cba87dedab32daa92226c9fc0ec1d9a1caec1cd5'
+  sha256 '3ecd5f88efa058ecab28f3ebc7aa9ff0e8a7cabee1f2dd8e0b2775d9f7269cdb'
 
   version HOMEBREW_PT_VERSION
   head 'https://github.com/monochromegane/the_platinum_searcher.git', :branch => 'master'
